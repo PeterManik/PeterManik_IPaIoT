@@ -1,8 +1,1 @@
-<?php
-
-echo <h1>"joj"</h1>
-
-
-
-
-?>
+<?php echo '<p>First web on Azure</p>'; ?>
