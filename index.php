@@ -24,7 +24,7 @@
         <label>Are you satisfied with the site?</label>
         <label for="Satisfied">Yes</label>
         <input type="radio" id="Satisfied" name="Satisfied" value="Yes">
-        <label for="Satisfied">No</label>
+        <label for="notSatisfied">No</label>
         <input type="radio" id="notSatisfied" name="Satisfied" value="No">
         </div>
     
