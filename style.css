@@ -4,6 +4,7 @@ body{
 }
 
 #myForm{
+    width: auto;
     margin: 10%;
     padding: 25px;
     align-items: center;
