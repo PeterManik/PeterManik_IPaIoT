@@ -13,9 +13,9 @@
     <form id="myForm" method="post" action="">
         
         <label for="name">Your personal information</label>
-        <input type="text" id="name" name="name" placeholder="Your first name" required>
-        <input type="text" id="surname" name="surname" placeholder="Your last name" required>
-        <input type="email" id="email" name="email" placeholder="Your E-mail" required >
+        <input type="text" id="name" name="name" placeholder="Your first name" >
+        <input type="text" id="surname" name="surname" placeholder="Your last name" >
+        <input type="email" id="email" name="email" placeholder="Your E-mail" >
         
     
         
@@ -30,7 +30,7 @@
     
         
         <label for="opinion">Please tell us what you think</label>
-        <textarea id="opinion" name="opinion" rows="5" cols="50" required></textarea>
+        <textarea id="opinion" name="opinion" rows="5" cols="50" ></textarea>
     
     
         <input id="submit" type="submit" name="submit" value="Submit" >
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
     $opinion=$_POST['opinion'];
 
     $fp = fopen('data.txt', 'a');
-
+    echo $email;
     fwrite($fp, $name);
     fwrite($fp, $surname);
     fwrite($fp, $email);
