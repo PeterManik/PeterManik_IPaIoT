@@ -10,7 +10,7 @@
 </head>
 
 
-    <form id="myForm" method="post">
+    <form id="myForm" method="post" action="">
         
         <label for="name">Your personal information</label>
         <input type="text" id="name" name="name" placeholder="Your first name" required>
@@ -33,7 +33,7 @@
         <textarea id="opinion" name="opinion" rows="5" cols="50" required></textarea>
     
     
-        <input id="submit" type="submit" value="Submit" >
+        <input id="submit" type="submit" name="submit" value="Submit" >
         <input id="reset" type="reset" value="Reset" >
     
     </form>
