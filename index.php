@@ -41,7 +41,7 @@
 
 <?php  
 
-if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['opinion'])) {
+if (isset($_POST['submit'])) {
     $name=$_POST['name'];
     $surname=$_POST['surname'];
     $email=$_POST['email'];
