@@ -5,7 +5,8 @@ body{
 
 #myForm{
     width: 50%;
-    margin: 10%;
+    margin-top: 10%;
+    margin-left: 25%;
     padding: 25px;
     align-items: center;
     background-color: aquamarine;
