@@ -1,12 +1,13 @@
 
 body{
-    color: aqua;
+    background-color: blue;
 }
 
 #myForm{
     margin: 10%;
-    background-color: gold;
-    border: 1px solid gold;
+    align-items: center;
+    background-color: aquamarine;
+    border: 1px solid aquamarine;
 }
 
 input, label{
