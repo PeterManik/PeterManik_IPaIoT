@@ -72,7 +72,8 @@ if (isset($_POST['submit'])) {
     fwrite($fp, "Email : ".$email.PHP_EOL);
     fwrite($fp, "Opinion : ".$opinion.PHP_EOL);
     fwrite($fp, "Postal code : ".$postal.PHP_EOL);
-    echo $name." ".$surname." ".$email." ".$satisfied." ".$opinion." ".$postal;
+    echo "done";
+    echo $name . " " . $surname . " " . $email . " " . $satisfied . " " . $opinion . " " . $postal;
     fclose($fp);
 }
 
