@@ -1,7 +1,15 @@
-#myForm{
-    margin: 10%;
+
+body{
+    color: aqua;
 }
 
-input{
+#myForm{
+    margin: 10%;
+    background-color: gold;
+    border: 1px solid gold;
+}
+
+input, label{
     display: block;
 }
+
