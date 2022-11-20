@@ -8,8 +8,8 @@
         
         <label for="name">Your personal information</label>
         <input type="text" id="name" name="name" placeholder="Your first name" required>
-        <input type="text" id="surname" name="surname" placeholder="Your last name" >
-        <input type="email" id="email" name="email" placeholder="Your E-mail" >
+        <input type="text" id="surname" name="surname" placeholder="Your last name" required>
+        <input type="email" id="email" name="email" placeholder="Your E-mail" required >
         
     
         
@@ -41,12 +41,18 @@
 
 <?php  
 
-if (isset($_POST['name'])) {
-    $data=$_POST['name'];
+if (isset($_POST['name']) && isset($_POST['surname']) && isset($_POST['email']) && isset($_POST['opinion'])) {
+    $name=$_POST['name'];
+    $surname=$_POST['surname'];
+    $email=$_POST['email'];
+    $opinion=$_POST['opinion'];
 
     $fp = fopen('data.txt', 'a');
 
-    fwrite($fp, $data);
+    fwrite($fp, $name);
+    fwrite($fp, $surname);
+    fwrite($fp, $email);
+    fwrite($fp, $opinion);
     fclose($fp);
 }
 
