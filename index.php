@@ -56,14 +56,7 @@ if (isset($_POST['submit'])) {
 
     $fp = fopen('data.txt', 'a');
 
-    if ($_POST['Satisfied']==Yes) {
-        $satisfied="yes";
-        fwrite($fp, "Satisfied".PHP_EOL);
-    }
-    else {
-        $satisfied="no";
-        fwrite($fp, "Not satisfied".PHP_EOL);
-    }
+    
 
 
     
@@ -73,7 +66,7 @@ if (isset($_POST['submit'])) {
     fwrite($fp, "Opinion : ".$opinion.PHP_EOL);
     fwrite($fp, "Postal code : ".$postal.PHP_EOL);
     echo "done";
-    echo $name . " " . $surname . " " . $email . " " . $satisfied . " " . $opinion . " " . $postal;
+    echo $name . " " . $surname . " " . $email . " "  . $opinion . " " . $postal;
     fclose($fp);
 }
 
