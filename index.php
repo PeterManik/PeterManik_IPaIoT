@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
     $opinion=$_POST['opinion'];
 
     $fp = fopen('data.txt', 'a');
-    echo $email;
+    echo $name." ".$surname." ".$email." ".$opinion;
     fwrite($fp, $name);
     fwrite($fp, $surname);
     fwrite($fp, $email);

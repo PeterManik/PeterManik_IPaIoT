@@ -5,9 +5,11 @@ body{
 
 #myForm{
     margin: 10%;
+    padding: 25px;
     align-items: center;
     background-color: aquamarine;
     border: 1px solid aquamarine;
+    border-radius: 25px;
 }
 
 input, label{
