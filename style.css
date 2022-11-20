@@ -16,6 +16,10 @@ body{
 
 input, label{
     display: block;
+    
+}
+
+#name,#surname,#email,#postal,#phone{
     margin-bottom: 2%;
 }
 
