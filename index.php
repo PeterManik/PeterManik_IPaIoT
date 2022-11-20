@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
+<head>
+    <meta charset="UTF-8">
 
+    <link rel="stylesheet" href="style.css" media="screen">
+    
+    
+</head>
 
 
     <form id="myForm" method="post">
@@ -17,9 +23,9 @@
         <div id="boxes">
         <label>Are you satisfied with the site?</label>
         <label for="Satisfied">Yes</label>
-        <input type="radio" id="Satisfied" name="Satisfied" onclick="showCheck()">
+        <input type="radio" id="Satisfied" name="Satisfied" >
         <label for="notSatisfied">No</label>
-        <input type="radio" id="notSatisfied" name="Satisfied" onclick="showCheck()">
+        <input type="radio" id="notSatisfied" name="Satisfied" >
         </div>
     
         
@@ -53,7 +59,7 @@ if (isset($_POST['submit'])) {
     fwrite($fp, $surname);
     fwrite($fp, $email);
     fwrite($fp, $opinion);
-    console.log("something happened");
+    
     fclose($fp);
 }
 
