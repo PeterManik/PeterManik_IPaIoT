@@ -16,5 +16,6 @@ body{
 
 input, label{
     display: block;
+    margin-bottom: 2%;
 }
 

@@ -17,7 +17,7 @@
         <input type="text" id="surname" name="surname" placeholder="Your last name" >
         <input type="email" id="email" name="email" placeholder="Your E-mail" >
         <input type="text" id="postal" name="postal" placeholder="Postal Code">
-    
+        <input type="tel" id="phone" name="phone" placeholder="phone number">
         
     
         <div id="boxes">
@@ -53,20 +53,20 @@ if (isset($_POST['submit'])) {
     $email=$_POST['email'];
     $opinion=$_POST['opinion'];
     $postal=$_POST['postal'];
+    $phone=$_POST['phone'];
 
     $fp = fopen('data.txt', 'a');
-
-    
-
 
     
     fwrite($fp, "Name : ".$name.PHP_EOL);
     fwrite($fp, "Surname :".$surname.PHP_EOL);
     fwrite($fp, "Email : ".$email.PHP_EOL);
-    fwrite($fp, "Opinion : ".$opinion.PHP_EOL);
     fwrite($fp, "Postal code : ".$postal.PHP_EOL);
+    fwrite($fp, "Phone number : ".$phone.PHP_EOL);
+    fwrite($fp, "Opinion : ".$opinion.PHP_EOL);
+    
     echo "done <br>";
-    echo $name . " " . $surname . " " . $email . " "  . $opinion . " " . $postal;
+    echo $name . " " . $surname . " " . $email . " " . $phone . " " . $opinion . " " . $postal;
     fclose($fp);
 }
 
