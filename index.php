@@ -53,6 +53,7 @@ if (isset($_POST['submit'])) {
     fwrite($fp, $surname);
     fwrite($fp, $email);
     fwrite($fp, $opinion);
+    console.log("something happened");
     fclose($fp);
 }
 
