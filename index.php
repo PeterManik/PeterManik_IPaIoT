@@ -147,6 +147,7 @@ filter: drop-shadow(-10px 10px 10px black);
 </div>
 
 <?php
+        echo 'ide';
         $toSplit = explode(";", file_get_contents("sensors.txt"));
         echo $toSplit[0];
         
