@@ -15,7 +15,7 @@
         else{
             echo 'yes';
         }
-        //$vr = fread($file1, filesize("sensors.txt"));
+        $vr = fread($file1, filesize("sensors.txt"));
         //echo filesize("sensors.txt");
         //echo $vr;
         $toSplit = explode(";", file_get_contents("sensors.txt"));
