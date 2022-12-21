@@ -13,7 +13,7 @@
             echo 'no';
         }
         else{
-            echo 'yes'
+            echo 'yes';
         }
         fclose($file1);
 
