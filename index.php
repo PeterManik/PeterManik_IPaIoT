@@ -22,6 +22,7 @@
         for ($i = 1; $i <= 10; $i++) {
             $temp = $i;
             $moist = $i;
+            sleep(1);
         }
 
 
@@ -155,8 +156,8 @@ filter: drop-shadow(-10px 10px 10px black);
     <tbody>
     <tr>
 
-        <td><div id="temperature"><?php echo $temp; ?>+"C"</div></td>
-        <td><div id="moisture"></div><?php echo $moist; ?>+"%"</td>
+        <td><div id="temperature"><?php echo $temp; ?>"C"</div></td>
+        <td><div id="moisture"></div><?php echo $moist; ?>"%"</td>
         <td><div id="led">No</div></td>
 
     </tr>
