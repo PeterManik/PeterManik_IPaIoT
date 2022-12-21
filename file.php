@@ -15,9 +15,10 @@
         else{
             echo 'yes';
         }
-        $vr = fread($file1, filesize("sensors.txt"));
-        echo filesize("sensors.txt");
-        echo $vr;
+        //$vr = fread($file1, filesize("sensors.txt"));
+        //echo filesize("sensors.txt");
+        //echo $vr;
+        echo file_get_contents("sensors.txt");
         fclose($file1);
 
         $file2 = fopen("actuator.txt","w") or die("Unable to open file!");
