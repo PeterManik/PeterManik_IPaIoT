@@ -1,7 +1,7 @@
 
 <?php
 
-echo '<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -197,7 +197,7 @@ filter: drop-shadow(-10px 10px 10px black);
 </script>
 
 
-</html>'
+</html>
 
 
 
