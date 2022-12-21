@@ -4,7 +4,7 @@
         $sn2 = $_GET["b"];
         
         $file1 = fopen("sensors.txt","w") or die("Unable to open file!");
-        $text1 = "a=" . $sn1 . " b=" . $sn2;
+        $text1 = $sn1 . ";" . $sn2;
         
         fwrite($file1, $text1);
         
@@ -18,7 +18,8 @@
         //$vr = fread($file1, filesize("sensors.txt"));
         //echo filesize("sensors.txt");
         //echo $vr;
-        echo file_get_contents("sensors.txt");
+        $toSplit = explode(";", file_get_contents("sensors.txt"));
+        echo $toSplit[0];
         fclose($file1);
 
         $file2 = fopen("actuator.txt","w") or die("Unable to open file!");
