@@ -10,6 +10,8 @@
 <script type="text/javascript">
 
 
+
+
  var open = 0;
  function ButtonPress(){
      
@@ -145,7 +147,8 @@ filter: drop-shadow(-10px 10px 10px black);
 </div>
 
 <?php
-        
+        $toSplit = explode(";", file_get_contents("sensors.txt"));
+        echo $toSplit[0];
         
 ?>
 
