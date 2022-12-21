@@ -154,6 +154,9 @@ filter: drop-shadow(-10px 10px 10px black);
         $toSplit = explode(";", file_get_contents("https://pm167web.azurewebsites.net/sensors.txt"));
         $temp = $toSplit[0];
         $moist = $toSplit[1];
+
+        echo $temp;
+        echo $moist;
         
 ?>
 
