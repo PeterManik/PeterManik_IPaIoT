@@ -76,7 +76,7 @@ var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("temperature").innerHTML =
-      this.responseText.split(";")[0]+"C";
+      this.responseText.split(";")[0]+"°C";
       document.getElementById("moisture").innerHTML =
       this.responseText.split(";")[1]+"%"; 
     }
