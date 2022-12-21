@@ -121,13 +121,7 @@ filter: drop-shadow(-10px 10px 10px black);
 
 </body>
 
-
-
-
-</html>
-<?php
-
-        echo '<script type="text/javascript">
+<script type="text/javascript">
 
 
         /* var open = 0;
@@ -200,7 +194,13 @@ filter: drop-shadow(-10px 10px 10px black);
          }
      
      */
-     </script>';
+     </script>
+
+
+</html>
+<?php
+
+        
         echo '<h1>YOOOOO</h1>';
 
 
