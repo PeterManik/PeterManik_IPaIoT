@@ -16,6 +16,7 @@
             echo 'yes';
         }
         $vr = fread($file1, filesize("sensors.txt"));
+        echo filesize("sensors.txt");
         echo $vr;
         fclose($file1);
 
