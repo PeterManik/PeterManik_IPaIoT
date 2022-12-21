@@ -9,15 +9,14 @@
     <title>IoT</title>
 
 <?php
-        echo 'ide=';
-        $file1 = fopen("sensors.txt","r") or die("Unable to open file!");
+        
+/*        $file1 = fopen("sensors.txt","r") or die("Unable to open file!");
         
         $toSplit = explode(";", file_get_contents("https://pm167web.azurewebsites.net/sensors.txt"));
         $temp = $toSplit[0];
         $moist = $toSplit[1];
-
-        echo $temp;
-        echo $moist;
+*/
+    
 
         
 
