@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<?php
+
+echo '<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -194,9 +197,9 @@ filter: drop-shadow(-10px 10px 10px black);
 </script>
 
 
-</html>
+</html>'
 
-<?php
+
 
         echo '<h1>YOOOOO</h1>';
 
