@@ -9,7 +9,7 @@
         fwrite($file1, $text1);
         
         echo $text1;
-        if(filesize($file1) ==0){
+        if(filesize("sensors.txt") ==0){
             echo 'no';
         }
         else{
