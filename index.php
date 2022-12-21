@@ -7,9 +7,24 @@
     <meta charset="UTF-8">
     <!--<link rel="stylesheet" href="style.css" >-->
     <title>IoT</title>
+
+<?php
+        echo 'ide=';
+        $file1 = fopen("sensors.txt","r") or die("Unable to open file!");
+        
+        $toSplit = explode(";", file_get_contents("https://pm167web.azurewebsites.net/sensors.txt"));
+        $temp = $toSplit[0];
+        $moist = $toSplit[1];
+
+        echo $temp;
+        echo $moist;
+        
+?>
 <script type="text/javascript">
 
+var tmp = <?php echo $temp; ?>;
 
+document.getElementById("temperature").innerHTML=tmp;
 
 
  var open = 0;
@@ -17,7 +32,7 @@
      
 
      if (open==0){
-
+        
          document.getElementById("led").innerHTML="Yes";
          document.getElementById("open").innerHTML="CLOSE FRIDGE";
          open=1;
@@ -146,18 +161,7 @@ filter: drop-shadow(-10px 10px 10px black);
     <button id="open"  onclick="ButtonPress()">OPEN FRIDGE</button>
 </div>
 
-<?php
-        echo 'ide';
-        $file1 = fopen("sensors.txt","r") or die("Unable to open file!");
-        
-        $toSplit = explode(";", file_get_contents("https://pm167web.azurewebsites.net/sensors.txt"));
-        $temp = $toSplit[0];
-        $moist = $toSplit[1];
 
-        echo $temp;
-        echo $moist;
-        
-?>
 
 
 </body>
