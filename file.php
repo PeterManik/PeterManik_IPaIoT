@@ -12,6 +12,9 @@
         if(filesize($file1) ==0){
             echo 'no';
         }
+        else{
+            echo 'yes'
+        }
         fclose($file1);
 
         $file2 = fopen("actuator.txt","w") or die("Unable to open file!");
