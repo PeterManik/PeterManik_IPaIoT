@@ -117,6 +117,14 @@ filter: drop-shadow(-10px 10px 10px black);
     <button id="open"  onclick="ButtonPress()">OPEN FRIDGE</button>
 </div>
 
+<?php
+
+        
+        echo '<script type="text/javascript">ButtonPress();</script>';
+
+
+
+?>
 
 
 </body>
@@ -198,11 +206,3 @@ filter: drop-shadow(-10px 10px 10px black);
 
 
 </html>
-<?php
-
-        
-        echo '<h1>YOOOOO</h1>';
-
-
-
-?>
