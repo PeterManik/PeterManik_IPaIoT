@@ -40,7 +40,7 @@ var xmlHttp=createXmlHttpObject();
   var open = 0;
 
 
- function ButtonPress(){
+ /*function ButtonPress(){
      
 
      if (open==0){
@@ -58,7 +58,7 @@ var xmlHttp=createXmlHttpObject();
          document.getElementById("open").innerHTML="OPEN FRIDGE"
          open=0;
          
-     }
+     }*/
 
 
  }
@@ -78,12 +78,17 @@ var xhttp = new XMLHttpRequest();
       this.responseText.split(";")[0]+"°C";
       document.getElementById("moisture").innerHTML =
       this.responseText.split(";")[1]+"%"; 
+      if(this.responseText.split(";")[2] == 1){
+        document.getElementById("led").innerHTML = "Yes";  
+      }
+      else{
+        document.getElementById("led").innerHTML = "No";
+      }
+
     }
   };
   xhttp.open("GET", "https://pm167web.azurewebsites.net/sensors.txt", true);
   xhttp.send();
-
-  
 
 }
 
