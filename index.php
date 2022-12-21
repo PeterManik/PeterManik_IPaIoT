@@ -75,7 +75,7 @@ var xhttp = new XMLHttpRequest();
       this.responseText.split(";")[1];
     }
   };
-  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.open("GET", "https://pm167web.azurewebsites.net/sensors.txt", true);
   xhttp.send();
 
 
