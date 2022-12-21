@@ -18,6 +18,13 @@
 
         echo $temp;
         echo $moist;
+
+        for ($i = 1; $i <= 10; $i++) {
+            $temp = $i;
+            $moist = $i;
+        }
+
+
         
 ?>
 <script type="text/javascript">
@@ -148,8 +155,8 @@ filter: drop-shadow(-10px 10px 10px black);
     <tbody>
     <tr>
 
-        <td><div id="temperature"><?php echo $temp; ?></div></td>
-        <td><div id="moisture"></div><?php echo $moist; ?></td>
+        <td><div id="temperature"><?php echo $temp; ?>+"C"</div></td>
+        <td><div id="moisture"></div><?php echo $moist; ?>+"%"</td>
         <td><div id="led">No</div></td>
 
     </tr>
