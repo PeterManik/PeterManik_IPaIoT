@@ -1,74 +1,121 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <link rel="stylesheet" href="style.css" media="screen">
-    
-    
+    <link rel="stylesheet" href="style.css" >
+    <title>IoT</title>
 </head>
+<body>
 
+<div class="shadow">
+<table>
+    <caption style="font-weight: bold;" >Smart Fridge</caption>
+    <thead>
+    <tr>
+        <th>Temperature</th>
+        <th>Humidity</th>
+        <th>Open?</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
 
-    <form id="myForm" method="post" action="">
-        
-        <label for="name">Your personal information</label>
-        <input type="text" id="name" name="name" placeholder="Your first name" >
-        <input type="text" id="surname" name="surname" placeholder="Your last name" >
-        <input type="email" id="email" name="email" placeholder="Your E-mail" >
-        <input type="text" id="postal" name="postal" placeholder="Postal Code">
-        <input type="tel" id="phone" name="phone" placeholder="phone number">
-        
-    
-        <div id="boxes">
-        <label>Are you satisfied with the site?</label>
-        <label for="Satisfied">Yes</label>
-        <input type="radio" id="Satisfied" name="Satisfied" value="Yes">
-        <label for="notSatisfied">No</label>
-        <input type="radio" id="notSatisfied" name="Satisfied" value="No">
-        </div>
-    
-        
-        <label for="opinion">Please tell us what you think</label>
-        <textarea id="opinion" name="opinion" rows="5" cols="50" required></textarea>
-    
-    
-        <input id="submit" type="submit" name="submit" value="Submit" >
-        <input id="reset" type="reset" value="Reset" >
-    
-    </form>
+        <td><div id="b0"></div></td>
+        <td><div id="b1"></div></td>
+        <td><div id="led">No</div></td>
+
+    </tr>
+
+</table>
+
+    <button id="open"  onclick="ButtonPress()">OPEN FRIDGE</button>
+</div>
 
 
 
 </body>
+
+<script type="text/javascript">
+
+
+   /* var open = 0;
+    var xmlHttp=createXmlHttpObject();
+
+    function createXmlHttpObject(){
+        if(window.XMLHttpRequest){
+            xmlHttp=new XMLHttpRequest();
+        }
+        else{
+            xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        return xmlHttp;
+    }
+*/
+
+
+    function ButtonPress(){
+        //var xhttp = new XMLHttpRequest();
+
+        if (open==0){
+
+            document.getElementById("led").innerHTML="Yes";
+            document.getElementById("open").innerHTML="CLOSE FRIDGE";
+            open=1;
+        }
+        else if (open==1){
+
+            document.getElementById("led").innerHTML="No";
+            document.getElementById("open").innerHTML="OPEN FRIDGE"
+            open=0;
+        }
+
+
+        //xhttp.open("PUT", "BUTTON", false);
+        //xhttp.send();
+
+
+    }
+
+   /*function response(){
+        var message;
+        var xmlResponse;
+        var xmldoc;
+
+        xmlResponse=xmlHttp.responseXML;
+
+        xmldoc = xmlResponse.getElementsByTagName("B0");
+        message = xmldoc[0].firstChild.nodeValue;
+        document.getElementById("b0").innerHTML=message;
+
+        xmldoc = xmlResponse.getElementsByTagName("B1");
+        message = xmldoc[0].firstChild.nodeValue;
+        document.getElementById("b1").innerHTML=message;
+
+
+
+    }
+
+    function process(){
+
+        if(xmlHttp.readyState==0 || xmlHttp.readyState==4) {
+            xmlHttp.open("PUT","xml",true);
+            xmlHttp.onreadystatechange=response;
+            xmlHttp.send(null);
+        }
+        // you may have to play with this value, big pages need more porcessing time, and hence
+        // a longer timeout
+        setTimeout("process()",100);
+    }
+
+*/
+</script>
+
+
 </html>
 
+<?php
 
-
-<?php  
-
-if (isset($_POST['submit'])) {
-    $name=$_POST['name'];
-    $surname=$_POST['surname'];
-    $email=$_POST['email'];
-    $opinion=$_POST['opinion'];
-    $postal=$_POST['postal'];
-    $phone=$_POST['phone'];
-
-    $fp = fopen('data.txt', 'a');
-
-    
-    fwrite($fp, "Name : ".$name.PHP_EOL);
-    fwrite($fp, "Surname :".$surname.PHP_EOL);
-    fwrite($fp, "Email : ".$email.PHP_EOL);
-    fwrite($fp, "Postal code : ".$postal.PHP_EOL);
-    fwrite($fp, "Phone number : ".$phone.PHP_EOL);
-    fwrite($fp, "Opinion : ".$opinion.PHP_EOL);
-    
-    echo "done <br>";
-    echo $name . " " . $surname . " " . $email . " " . $phone . " " . $opinion . " " . $postal;
-    fclose($fp);
-}
+        echo '<h1>YOOOOO</h1>';
 
 
 
