@@ -39,6 +39,9 @@ var xmlHttp=createXmlHttpObject();
   }
 
 
+setInterval(repeat,1000);
+
+function repeat(){
 
  var open = 0;
 
@@ -70,15 +73,17 @@ var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       document.getElementById("temperature").innerHTML =
-      this.responseText.split(";")[0];
+      this.responseText.split(";")[0]+"C";
       document.getElementById("moisture").innerHTML =
-      this.responseText.split(";")[1];
+      this.responseText.split(";")[1]+"%"; 
     }
   };
   xhttp.open("GET", "https://pm167web.azurewebsites.net/sensors.txt", true);
   xhttp.send();
 
+  
 
+}
 
 
 
@@ -182,8 +187,8 @@ filter: drop-shadow(-10px 10px 10px black);
     <tbody>
     <tr>
 
-        <td><div id="temperature"><?php echo $temp; ?>C</div></td>
-        <td><div id="moisture"></div><?php echo $moist; ?>%</td>
+        <td><div id="temperature"></div></td>
+        <td><div id="moisture"></div></td>
         <td><div id="led">No</div></td>
 
     </tr>
