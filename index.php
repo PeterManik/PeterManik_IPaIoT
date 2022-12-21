@@ -7,11 +7,11 @@
     <meta charset="UTF-8">
     <!--<link rel="stylesheet" href="style.css" >-->
     <title>IoT</title>
-    <script type="text/javascript">
+<script type="text/javascript">
 
 
-/* var open = 0;
- var xmlHttp=createXmlHttpObject();
+var open = 0;
+ /*var xmlHttp=createXmlHttpObject();
 
  function createXmlHttpObject(){
      if(window.XMLHttpRequest){
