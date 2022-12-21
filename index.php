@@ -22,9 +22,7 @@
 ?>
 <script type="text/javascript">
 
-var tmp = <?php echo $temp; ?>;
 
-document.getElementById("temperature").innerHTML=tmp;
 
 
  var open = 0;
