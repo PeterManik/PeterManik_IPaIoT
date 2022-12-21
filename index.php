@@ -19,21 +19,30 @@
         echo $temp;
         echo $moist;
 
-        for ($i = 1; $i <= 10; $i++) {
-            $temp = $i;
-            $moist = $i;
-            sleep(1);
-        }
+        
 
 
         
 ?>
 <script type="text/javascript">
 
+var xmlHttp=createXmlHttpObject();
+  // function to create XML object
+  function createXmlHttpObject(){
+    if(window.XMLHttpRequest){
+      xmlHttp=new XMLHttpRequest();
+    }
+    else{
+      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    return xmlHttp;
+  }
 
 
 
  var open = 0;
+
+ while(1){
  function ButtonPress(){
      
 
@@ -54,6 +63,23 @@
 
 
  }
+
+
+
+var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("temperature").innerHTML =
+      this.responseText.split(";")[0];
+      document.getElementById("moisture").innerHTML =
+      this.responseText.split(";")[1];
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true);
+  xhttp.send();
+
+
+}
 
 
 
@@ -156,8 +182,8 @@ filter: drop-shadow(-10px 10px 10px black);
     <tbody>
     <tr>
 
-        <td><div id="temperature"><?php echo $temp; ?>"C"</div></td>
-        <td><div id="moisture"></div><?php echo $moist; ?>"%"</td>
+        <td><div id="temperature"><?php echo $temp; ?>C</div></td>
+        <td><div id="moisture"></div><?php echo $moist; ?>%</td>
         <td><div id="led">No</div></td>
 
     </tr>
