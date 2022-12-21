@@ -8,6 +8,9 @@
         
         fwrite($file1, $text1);
         fclose($file1);
+        echo $text1;
+        $file67 = fopen("sensors.txt", "r");
+        echo fread($file67, $filesize($filename));
         
         $file2 = fopen("actuator.txt","w") or die("Unable to open file!");
         $text2 = "Value from actuator. Save this value to actuator.txt";
