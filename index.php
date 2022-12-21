@@ -38,12 +38,7 @@ var xmlHttp=createXmlHttpObject();
     return xmlHttp;
   }
 
-
-setInterval(repeat,1000);
-
-function repeat(){
-
- var open = 0;
+  var open = 0;
 
 
  function ButtonPress(){
@@ -66,6 +61,12 @@ function repeat(){
 
 
  }
+
+setInterval(repeat,1000);
+
+function repeat(){
+
+ 
 
 
 
