@@ -42,7 +42,7 @@ var xmlHttp=createXmlHttpObject();
 
  var open = 0;
 
- while(1){
+
  function ButtonPress(){
      
 
@@ -79,7 +79,7 @@ var xhttp = new XMLHttpRequest();
   xhttp.send();
 
 
-}
+
 
 
 
