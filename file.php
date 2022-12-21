@@ -1,12 +1,12 @@
 <?php
         
-        //$sn1 = $_GET["a"];
-        //$sn2 = $_GET["b"];
+        $sn1 = $_GET["a"];
+        $sn2 = $_GET["b"];
         
         $file1 = fopen("sensors.txt","w") or die("Unable to open file!");
-        //$text1 = $sn1 . ";" . $sn2;
+        $text1 = $sn1 . ";" . $sn2;
         
-        //fwrite($file1, $text1);
+        fwrite($file1, $text1);
         
         echo $text1;
         if(filesize("sensors.txt") ==0){

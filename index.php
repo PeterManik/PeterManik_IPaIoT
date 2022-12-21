@@ -9,7 +9,8 @@
     <title>IoT</title>
 <script type="text/javascript">
 
-
+var tmp = "<?php echo $temp; ?>";
+document.getElementById("temperature").innerHTML=tmp;
 
 
  var open = 0;
@@ -135,8 +136,8 @@ filter: drop-shadow(-10px 10px 10px black);
     <tbody>
     <tr>
 
-        <td><div id="b0"></div></td>
-        <td><div id="b1"></div></td>
+        <td><div id="temperature"></div></td>
+        <td><div id="moisture"></div></td>
         <td><div id="led">No</div></td>
 
     </tr>
@@ -147,11 +148,12 @@ filter: drop-shadow(-10px 10px 10px black);
 </div>
 
 <?php
-        echo 'ide2';
+        echo 'ide';
         $file1 = fopen("sensors.txt","r") or die("Unable to open file!");
-        $vr = fread($file1, filesize("sensors.txt"));
+        
         $toSplit = explode(";", file_get_contents("sensors.txt"));
-        echo $toSplit[0];
+        $temp = $toSplit[0];
+        $moist = $toSplit[1];
         
 ?>
 
