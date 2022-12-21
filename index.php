@@ -19,14 +19,14 @@
          document.getElementById("led").innerHTML="Yes";
          document.getElementById("open").innerHTML="CLOSE FRIDGE";
          open=1;
-         document.cookie="open=1";
+         
      }
      else if (open==1){
 
          document.getElementById("led").innerHTML="No";
          document.getElementById("open").innerHTML="OPEN FRIDGE"
          open=0;
-         document.cookie="open=0";
+         
      }
 
 
@@ -147,7 +147,7 @@ filter: drop-shadow(-10px 10px 10px black);
 <?php
         
         echo '<script type="text/javascript">ButtonPress();</script>';
-        echo $_COOKIE['open'];
+        echo "<script>document.writeln(open);</script>";
 ?>
 
 
