@@ -193,6 +193,7 @@ filter: drop-shadow(-10px 10px 10px black);
 <?php
 
 $a = 0
+echo $a;
 while ($a <= 10) {
     echo '<h1>$a+1</h1>';
 }
