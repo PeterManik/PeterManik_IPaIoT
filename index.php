@@ -146,8 +146,7 @@ filter: drop-shadow(-10px 10px 10px black);
 
 <?php
         
-        echo '<script type="text/javascript">ButtonPress();</script>';
-        echo "<script>document.writeln(open);</script>";
+        
 ?>
 
 
