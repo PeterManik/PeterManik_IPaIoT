@@ -49,6 +49,8 @@ var xmlHttp=createXmlHttpObject();
          document.getElementById("led").innerHTML="Yes";
          document.getElementById("open").innerHTML="CLOSE FRIDGE";
          open=1;
+
+        
          
      }
      else if (open==1){
@@ -62,7 +64,7 @@ var xmlHttp=createXmlHttpObject();
 
  }
 
-setInterval(repeat,1000);
+setInterval(repeat,100);
 
 function repeat(){
 
