@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 function read($filename){
     $file1 = fopen("subor.txt","r");
     $toSplit = explode(";", file_get_contents($filename));
-    $done = $toSplit[0]*$toSplit[1]*$toSplit[2]*$toSplit[3]*$toSplit[4];
+    $done = (int)$toSplit[0]*(int)$toSplit[1]*(int)$toSplit[2]*(int)$toSplit[3]*(int)$toSplit[4];
     echo $done;
     fclose($file1);
 
