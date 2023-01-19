@@ -18,12 +18,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $in3 = $_POST['in3'];
     $in4 = $_POST['in4'];
     $in5 = $_POST['in5'];
+    if(empty($in1) || empty($in2) || empty($in3) || empty($in4) || empty($in5)){
+      echo zadaj hodnoty;
+    }
+    else{
     $text1 = $in1 . ";" . $in2 . ";" . $in3 . ";" . $in4 . ";" . $in5;
 
     $file1 = fopen("subor.txt","w");
     fwrite($file1, $text1);
     fclose($file1);
     read("subor.txt");
+  }
   //$name = $_POST['fname'];
   //if (empty($name)) {
   //  echo "Name is empty";
