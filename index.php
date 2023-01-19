@@ -1,216 +1,48 @@
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <!--<link rel="stylesheet" href="style.css" >-->
-    <title>IoT</title>
-
-<?php
-        
-/*        $file1 = fopen("sensors.txt","r") or die("Unable to open file!");
-        
-        $toSplit = explode(";", file_get_contents("https://pm167web.azurewebsites.net/sensors.txt"));
-        $temp = $toSplit[0];
-        $moist = $toSplit[1];
-*/
-    
-
-        
-
-
-        
-?>
-<script type="text/javascript">
-
-var xmlHttp=createXmlHttpObject();
-  // function to create XML object
-  function createXmlHttpObject(){
-    if(window.XMLHttpRequest){
-      xmlHttp=new XMLHttpRequest();
-    }
-    else{
-      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    return xmlHttp;
-  }
-
-  var open = 0;
-
-
- /*function ButtonPress(){
-     
-
-     if (open==0){
-        
-         document.getElementById("led").innerHTML="Yes";
-         document.getElementById("open").innerHTML="CLOSE FRIDGE";
-         open=1;
-
-        
-         
-     }
-     else if (open==1){
-
-         document.getElementById("led").innerHTML="No";
-         document.getElementById("open").innerHTML="OPEN FRIDGE"
-         open=0;
-         
-     }*/
-
-
- }
-
-setInterval(repeat,100);
-
-function repeat(){
-
- 
-
-
-
-var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("temperature").innerHTML =
-      this.responseText.split(";")[0]+"°C";
-      document.getElementById("moisture").innerHTML =
-      this.responseText.split(";")[1]+"%"; 
-      if(this.responseText.split(";")[2] == 1){
-        document.getElementById("led").innerHTML = "Yes";  
-      }
-      else{
-        document.getElementById("led").innerHTML = "No";
-      }
-
-    }
-  };
-  xhttp.open("GET", "https://pm167web.azurewebsites.net/sensors.txt", true);
-  xhttp.send();
-
-}
-
-
-
-
-</script>
-
-    <style>
-body{
-
-font-family: Bahnschrift;
-background: url("res/6225108.png") repeat-x;
-animation: slide 60s linear infinite;
-}
-
-#open{
-font-weight: bold;
-background-color: goldenrod;
-border: none;
-border-radius: 7px;
-padding: 2%;
-font-size: 1.3em;
-cursor: pointer;
-filter: drop-shadow(-7px 7px  black);
-}
-
-#open:active{
-filter: drop-shadow(-5px 5px  black);
-transform: translate(-2px, 2px);
-}
-
-
-caption{
-font-size: 5em;
-
-}
-
-.sliding-background{
-display: block;
-height: 100vh;
-width: 100vw;
-
-}
-
-@keyframes slide {
-0%{
-    background-position: 0px 0px;
-}
-100%{
-    background-position: -3000px 0px;
-}
-}
-
-th,td{
-padding-right: 40px;
-font-size: 2em;
-
-}
-
-
-
-button{
-margin: auto;
-}
-
-table{
-margin: auto;
-margin-bottom: 20%;
-margin-top: 10%;
-}
-
-.shadow{
-margin: auto;
-margin-top: 5%;
-display: block;
-max-width: 60%;
-
-padding: 1%;
-padding-left: 2%;
-border-radius: 7px;
-background-color: beige;
-filter: drop-shadow(-10px 10px 10px black);
-}
-
-
-
-
-    </style>
-</head>
+<html>
 <body>
 
-<div class="shadow">
-<table>
-    <caption style="font-weight: bold;" >Smart Fridge</caption>
-    <thead>
-    <tr>
-        <th>Temperature</th>
-        <th>Humidity</th>
-        <th>Open?</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Input 1: <input type="text" name="in1">
+  Input 2: <input type="text" name="in2">
+  Input 3: <input type="text" name="in3">
+  Input 4: <input type="text" name="in4">
+  Input 5: <input type="text" name="in5">
+  <input type="submit">
+</form>
 
-        <td><div id="temperature"></div></td>
-        <td><div id="moisture"></div></td>
-        <td><div id="led">No</div></td>
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // collect value of input field
+    $in1 = $_POST['in1'];
+    $in2 = $_POST['in2'];
+    $in3 = $_POST['in3'];
+    $in4 = $_POST['in4'];
+    $in5 = $_POST['in5'];
+    $text1 = $in1 . ";" . $in2 . ";" . $in3 . ";" . $in4 . ";" . $in5;
 
-    </tr>
+    $file1 = fopen("subor.txt","w");
+    fwrite($file1, $text1);
+    fclose($file1);
+    read("subor.txt");
+  //$name = $_POST['fname'];
+  //if (empty($name)) {
+  //  echo "Name is empty";
+  //} else {
+  //  echo $name;
+  //}
+}
 
-</table>
+function read($filename){
+    $file1 = fopen("subor.txt","r");
+    $toSplit = explode(";", file_get_contents($filename));
+    $done = $toSplit[0]*$toSplit[1]*$toSplit[2]*$toSplit[3]*$toSplit[4];
+    echo $done;
+    fclose($file1);
 
-    <button id="open"  onclick="ButtonPress()">OPEN FRIDGE</button>
-</div>
 
+}
 
-
+?>
 
 </body>
-
-
-
-
 </html>
