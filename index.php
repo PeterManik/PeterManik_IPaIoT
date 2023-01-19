@@ -12,7 +12,7 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // collect value of input field
+  
     $in1 = $_POST['in1'];
     $in2 = $_POST['in2'];
     $in3 = $_POST['in3'];
@@ -29,12 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     fclose($file1);
     read("subor.txt");
   }
-  //$name = $_POST['fname'];
-  //if (empty($name)) {
-  //  echo "Name is empty";
-  //} else {
-  //  echo $name;
-  //}
+  
 }
 
 function read($filename){
